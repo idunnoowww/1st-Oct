@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 For Ghiza — My Love</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                        },
+                        lavender: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                        },
+                        warm: {
+                            50: '#fef7f0',
+                            100: '#fef3e2',
+                            200: '#fde6c8',
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .page {
+                @apply min-h-screen w-full transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 invisible;
+            }
+            .page.active {
+                @apply opacity-100 visible relative;
+            }
+            .nav-link {
+                @apply cursor-pointer transition-all duration-300 hover:text-rose-500 hover:scale-105;
+            }
+            .heart-btn {
+                @apply absolute w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-125 text-rose-400 hover:text-rose-600;
+            }
+            .card {
+                @apply bg-white/70 backdrop-blur-sm rounded-xl p-5 shadow-sm border border-rose-100 transition-all duration-300 hover:shadow-md hover:bg-white/90;
+            }
+            .fancy-text {
+                font-family: 'Playfair Display', serif;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(135deg, #fef7f0 0%, #fff1f2 50%, #f5f3ff 100%);
+            background-attachment: fixed;
+        }
+        .page {
+            padding: 2rem 1.5rem 4rem;
+        }
+        @media (min-width: 768px) {
+            .page {
+                padding: 3rem 4rem 5rem;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+        .heart-hidden {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .heart-reveal {
+            opacity: 1;
+        }
+        .message-popup {
+            animation: fadeInUp 0.5s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <div class="fixed top-0 left-0 w-full h-1 bg-rose-100 z-50">
+        <div id="progress" class="h-full bg-rose-400 w-0 transition-all duration-300"></div>
+    </div>
+
+    <!-- PAGE 1: Opening -->
+    <section id="page-1" class="page active">
+        <div class="flex flex-col justify-center min-h-[90vh]">
+            <p class="text-rose-600 text-lg mb-4">💌 overall structure — extended version</p>
+            <h1 class="fancy-text text-[clamp(2rem,5vw,3.5rem)] font-bold mb-8 text-rose-900">before anything else</h1>
+            
+            <blockquote class="fancy-text text-xl italic border-l-2 border-rose-300 pl-4 mb-8 text-gray-700">
+                i don't even know where to start, because somehow, every time i talk about you, words never feel like enough.
+            </blockquote>
+            
+            <p class="text-lg mb-4 leading-relaxed">It started so quietly, didn't it? Just another ordinary moment, another casual exchange, and then suddenly — you were there. Not just as someone passing through, but as someone who began to color every corner of my days.</p>
+            <p class="text-lg mb-4 leading-relaxed">I didn't notice at first. How your name became the one I wanted to hear. How your voice became the thing that could turn a heavy evening soft. Slowly, gently, you settled into my life until it felt strange to imagine it without you there at all.</p>
+            <p class="text-lg mb-12 leading-relaxed">And now? Now you feel like home. Like something I didn't even know I was looking for until it was already here, warm and real and mine.</p>
+            
+            <div class="mt-8 text-center">
+                <span class="nav-link inline-flex items-center gap-2 text-rose-600 font-medium" onclick="goToPage(2)">
+                    continue <i class="fa fa-chevron-right text-sm"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 2: How did you become this important? -->
+    <section id="page-2" class="page">
+        <div class="flex flex-col justify-center min-h-[90vh]">
+            <h2 class="fancy-text text-[clamp(1.8rem,4vw,3rem)] font-bold mb-8 text-rose-900">how did you become this important?</h2>
+            
+            <blockquote class="fancy-text text-xl italic border-l-2 border-rose-300 pl-4 mb-8 text-gray-700">
+                it's kind of funny when i think about it now. because i don't think either of us sat down one day and decided that we'd become this important to each other.
+            </blockquote>
+            
+            <p class="text-lg mb-4 leading-relaxed">it just happened.</p>
+            <p class="text-lg mb-4 leading-relaxed">one conversation became another. one little thing became a memory. and somehow, somewhere between all those ordinary days, you became someone i started looking for in everything.</p>
+            
+            <p class="text-lg mb-4 leading-relaxed">I started noticing the way you laugh — how sometimes it's quiet and soft, like something you're sharing only with me. I started remembering the things you like, the things that make your eyes light up, the little things you say when you're tired or happy or just being you.</p>
+            <p class="text-lg mb-4 leading-relaxed">I didn't plan any of it. I didn't decide "today I will care this much." It just grew, the way sunlight spreads across the floor — slow, steady, warm, until everything is touched by it.</p>
+            <p class="text-lg mb-12 leading-relaxed">And now I look around and realize: you're everywhere. In every song, in every quiet moment, in every breath I take that feels lighter because you exist.</p>
+            
+            <div class="flex justify-between items-center mt-8">
+                <span class="nav-link text-rose-600" onclick="goToPage(1)"><i class="fa fa-chevron-left"></i> back</span>
+                <span class="nav-link inline-flex items-center gap-2 text-rose-600 font-medium" onclick="goToPage(3)">
+                    continue <i class="fa fa-chevron-right text-sm"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: Things I Never Say Enough -->
+    <section id="page-3" class="page">
+        <h2 class="fancy-text text-[clamp(1.8rem,4vw,3rem)] font-bold mb-8 text-rose-900">things i never say enough</h2>
+        
+        <div class="grid gap-5 mb-12">
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">01 — your existence</p>
+                <p class="leading-relaxed">i don't think you realize how much your existence alone means to me. sometimes you don't even have to do anything. just knowing you're there is enough to make a bad day feel a little less heavy.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">02 — the little things</p>
+                <p class="leading-relaxed">i remember things you probably forgot five minutes after telling me. random words, tiny habits, the way you say certain things. i don't know why my brain keeps them, but it does. maybe that's what happens when someone matters too much.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">03 — your softness</p>
+                <p class="leading-relaxed">there's a softness in you that i don't think everyone gets to see. and i'm grateful that somehow, i've gotten to know that side of you.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">04 — the way you listen</p>
+                <p class="leading-relaxed">you don't just hear me — you actually listen. even when my words are messy, even when i don't make sense, even when i'm not saying anything at all. you sit with me in the quiet parts too.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">05 — your courage</p>
+                <p class="leading-relaxed">i see how hard you try. how you keep going even when things are heavy. you don't always talk about it, but i see it. and it makes me brave too.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">06 — how safe you make me feel</p>
+                <p class="leading-relaxed">with you, i don't feel like i have to be perfect. i can just be. tired, confused, quiet, silly — all of it. and somehow, you still look at me like i'm something wonderful.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">07 — your kindness</p>
+                <p class="leading-relaxed">it's in the small things. the way you care. the way you think of people. it's quiet, but it's real. and it's one of the most beautiful things about you.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">08 — the way you see me</p>
+                <p class="leading-relaxed">you see parts of me i forgot existed. parts i hid away. and you don't flinch. you don't turn away. you just hold space for them, and for me, and that is a gift i don't know how to thank you for enough.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">09 — your laugh</p>
+                <p class="leading-relaxed">it's my favorite sound. i want to keep it in a jar and listen to it on the hard days. you make happiness feel like something simple and possible.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">10 — just you</p>
+                <p class="leading-relaxed">not the version you try to be, but the one you are. the one that exists when no one's watching. that's the one i love most.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">11 — your patience</p>
+                <p class="leading-relaxed">even when i'm difficult, even when i'm slow to speak, even when i pull away — you stay. you wait. you don't rush me. thank you for that.</p>
+            </div>
+            
+            <div class="card">
+                <p class="font-semibold text-rose-600 mb-2">12 — how you changed me</p>
+                <p class="leading-relaxed">because of you, i want to be softer. braver. kinder. you make me want to be better, not because i have to, but because you deserve the best version of me.</p>
+            </div>
+        </div>
+        
+        <div class="flex justify-between items-center">
+            <span class="nav-link text-rose-600" onclick="goToPage(2)"><i class="fa fa-chevron-left"></i> back</span>
+            <span class="nav-link inline-flex items-center gap-2 text-rose-600 font-medium" onclick="goToPage(4)">
+                continue <i class="fa fa-chevron-right text-sm"></i>
+            </span>
+        </div>
+    </section>
+
+    <!-- PAGE 4: We weren't always easy -->
+    <section id="page-4" class="page">
+        <div class="flex flex-col justify-center min-h-[90vh]">
+            <h2 class="fancy-text text-[clamp(1.8rem,4vw,3rem)] font-bold mb-8 text-rose-900">🥀 we weren't always easy</h2>
+            
+            <blockquote class="fancy-text text-xl italic border-l-2 border-rose-300 pl-4 mb-8 text-gray-700">
+                i don't want to write about us like everything has always been perfect, because it hasn't.
+            </blockquote>
+            
+            <p class="text-lg mb-4 leading-relaxed">we've misunderstood each other. we've gotten scared. we've pulled away. we've said things badly, stayed quiet when we should've talked, and sometimes made things harder than they needed to be.</p>
+            <p class="text-lg mb-4 leading-relaxed">there have been nights i went to sleep with a heavy chest, wondering if we'd find our way back. moments where the distance felt bigger than the connection. moments where i questioned if i was too much, or not enough, or all the wrong things.</p>
+            <p class="text-lg mb-4 leading-relaxed">but i think that's also why this means so much to me.</p>
+            <p class="text-lg mb-4 leading-relaxed">because despite all the messy parts, there was always something underneath it all that kept telling me that you mattered.</p>
+            <p class="text-lg mb-4 leading-relaxed">we didn't give up. we didn't walk away. we stumbled, but we stayed. and that — more than any perfect moment — is what makes us real.</p>
+            <p class="text-lg mb-12 leading-relaxed">love isn't never being hard. it's choosing each other even when it is.</p>
+            
+            <div class="flex justify-between items-center mt-8">
+                <span class="nav-link text-rose-600" onclick="goToPage(3)"><i class="fa fa-chevron-left"></i> back</span>
+                <span class="nav-link inline-flex items-center gap-2 text-rose-600 font-medium" onclick="goToPage(5)">
+                    continue <i class="fa fa-chevron-right text-sm"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 5: The part of me that gets scared -->
+    <section id="page-5" class="page">
+        <div class="flex flex-col justify-center min-h-[90vh]">
+            <h2 class="fancy-text text-[clamp(1.8rem,4vw,3rem)] font-bold mb-8 text-rose-900">🫀 the part of me that gets scared</h2>
+            
+            <blockquote class="fancy-text text-xl italic border-l-2 border-rose-300 pl-4 mb-8 text-gray-700">
+                i know i can be difficult sometimes.
+            </blockquote>
+            
+            <p class="text-lg mb-4 leading-relaxed">i know i don't always say "i need you" when i actually do. sometimes i'd rather pretend i'm fine than admit that i want someone beside me. sometimes i pull away before anyone gets the chance to leave me first.</p>
+            <p class="text-lg mb-4 leading-relaxed">it's not because i don't care.</p>
+            <p class="text-lg mb-4 leading-relaxed">sometimes it's actually because i care too much.</p>
+            <p class="text-lg mb-4 leading-relaxed">i've spent so long building walls, learning to carry everything myself, convincing myself that needing someone means losing myself. and then you came along, and suddenly all those walls felt heavy to keep up.</p>
+            <p class="text-lg mb-4 leading-relaxed">i'm still learning how to let you in. how to say "i'm hurting" instead of "i'm okay." how to reach out instead of waiting. how to trust that you'll stay even when i'm not easy to love.</p>
+            <p class="text-lg mb-4 leading-relaxed">and somehow, you're one of the few people who makes me want to put that stupid armor down, even if just for a little while.</p>
+            <p class="text-lg mb-12 leading-relaxed">thank you for being patient with the parts of me that are still learning how to be loved.</p>
+            
+            <div class="flex justify-between items-center mt-8">
+                <span class="nav-link text-rose-600" onclick="goToPage(4)"><i class="fa fa-chevron-left"></i> back</span>
+                <span class="nav-link inline-flex items-center gap-2 text-rose-600 font-medium" onclick="goToPage(6)">
+                    continue <i class="fa fa-chevron-right text-sm"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 6: If I could keep one thing... -->
+    <section id="page-6" class="page">
+        <div class="flex flex-col justify-center min-h-[90vh]">
+            <h2 class="fancy-text text-[clamp(1.8rem,4vw,3rem)] font-bold mb-8 text-rose-900">🌙 if i could keep one thing…</h2>
+            
+            <blockquote class="fancy-text text-xl italic border-l-2 border-rose-300 pl-4 mb-8 text-gray-700">
+                if i could keep one thing from everything we've been through, i don't think i'd choose one specific day.
+            </blockquote>
+            
+            <p class="text-lg mb-4 leading-relaxed">i'd choose the feeling.</p>
+            <p class="text-lg mb-4 leading-relaxed">the feeling of knowing there's someone somewhere who knows me a little more than most people do. someone whose name can make an ordinary day feel different. someone i can miss even while we're still talking.</p>
+            <p class="text-lg mb-4 leading-relaxed">that's probably the strangest part.</p>
+            <p class="text-lg mb-4 leading-relaxed">how can i miss someone who's still here?</p>
+            <p class="text-lg mb-4 leading-relaxed">maybe because i want more than just messages and calls. i want to sit beside you. i want to see your face when you laugh. i want to reach out and know you're actually there. every moment apart feels like i'm waiting — for you, for us, for the day the distance finally closes.</p>
+            <p class="text-lg mb-4 leading-relaxed">i carry you with me everywhere. in quiet moments, in crowded rooms, in the spaces between my breaths. you're there. always.</p>
+            <p class="text-lg mb-12 leading-relaxed">and that feeling — of loving you, of being loved by you — is something i would never trade for anything.</p>
+            
+            <div class="flex justify-between items-center mt-8">
+                <span class="nav-link text-rose-600" onclick="goToPage(5)"><i class="fa fa-chevron-left"></i> back</span>
+                <span class="nav-link inline-flex items-center gap-2 text-rose-600 font-medium" onclick="goToPage(7)">
+                    the letter <i class="fa fa-heart text-sm"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+  
